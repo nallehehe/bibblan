@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Library {
     public ArrayList<String>books = new ArrayList<>();
-    public void addBook(){
+    public void displayBook(){
         books.add("The Stonekeeper");
         books.add("The Stonekeeper's Curse");
         books.add("Amulet: Book Three: The Cloud Searchers");
@@ -12,12 +12,7 @@ public class Library {
         books.add("Firelight");
         books.add("Supernova");
         books.add("Waverider: A Graphic Novel");
-        books.add("Amulet: Collectors Edition");
+        books.add("Amulet: Collectors Edition\n");
     }
-    public String displayAllBooks(){
-        for(String book : books){
-            return book;
-        }
-        return null;
     }
-}
+

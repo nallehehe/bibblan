@@ -22,7 +22,10 @@ public class Menu {
     }public void menuChoice(int choice){
         switch (choice){
             case 1:
-                library.displayAllBooks();
+                System.out.println("Available Books\n");
+                library.displayBook();
+                for(String book : library.books)
+                    System.out.println(book);
                 break;
             case 2:
                 System.out.println("Alternativ 2");
