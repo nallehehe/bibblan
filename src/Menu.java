@@ -22,13 +22,14 @@ public class Menu {
     }public void menuChoice(int choice){
         switch (choice){
             case 1:
-                System.out.println("Available Books\n");
-                library.displayBook();
-                for(String book : library.books)
+                System.out.println("All Books\n");
+                for(String book : library.getBooks())
                     System.out.println(book);
                 break;
             case 2:
-                System.out.println("Alternativ 2");
+                System.out.println("Available Books");
+                for(String book : library.getAvailableBooks())
+                System.out.println(book);
                 break;
             case 3:
                 System.out.println("Alternativ 3");
@@ -41,7 +42,9 @@ public class Menu {
 
     }
     public void runMenu(){
+        library.displayBook();
         while(true){
+
             displayMenu();
             choice=getChoice();
             menuChoice(choice);
