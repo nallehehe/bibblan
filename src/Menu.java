@@ -7,8 +7,9 @@ public class Menu {
     public void displayMenu(){
         System.out.println("1. Visa alla böcker");
         System.out.println("2. Visa alla tillgängliga böcker");
-        System.out.println("3. Visa information om en bok");
-        System.out.println("4. Avsluta");
+        System.out.println("3. Låna en bok");
+        System.out.println("4. Visa lånade böcker");
+        System.out.println("5. Avsluta");
 
     }
     public int getChoice(){
@@ -32,9 +33,13 @@ public class Menu {
                 System.out.println(book);
                 break;
             case 3:
-                System.out.println("Alternativ 3");
+                library.runLoanedBook();
                 break;
             case 4:
+                for(String book : library.loanedBooks)
+                    System.out.println(book);
+                break;
+            case 5:
                 System.exit(0);
             default:
                 System.out.println("Fel alternativ");
@@ -42,7 +47,7 @@ public class Menu {
 
     }
     public void runMenu(){
-        library.displayBook();
+        library.addBook();
         while(true){
 
             displayMenu();
