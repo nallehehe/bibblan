@@ -3,11 +3,10 @@ import java.util.ArrayList;
 public class Library {
     int loanChoice = 0;
     int removeChoice;
-    private ArrayList<String> allBooks = new ArrayList<>();
+    private final ArrayList<String> allBooks = new ArrayList<>();
+    private final ArrayList<String> availableBooks = (ArrayList<String>)allBooks.clone();
+    private final ArrayList<String> loanedBooks = new ArrayList<>();
 
-    public ArrayList<String> getAvailableBooks() {
-        return availableBooks;
-    }
     public int getLoanChoice(){
         System.out.println("Välj alternativ");
         try{
@@ -32,8 +31,10 @@ public class Library {
         return allBooks;
     }
 
-    private ArrayList<String> availableBooks = allBooks;
-    private ArrayList<String> loanedBooks = new ArrayList<>();
+    public ArrayList<String> getAvailableBooks() {
+
+        return availableBooks;
+    }
 
     public ArrayList<String> getLoanedBooks() {
         return loanedBooks;
@@ -41,6 +42,7 @@ public class Library {
 
     public void addBook(){
         //EJ INDEX POSITION
+        //INFO OM VARJE BOK!
         allBooks.add("The Stonekeeper");
         allBooks.add("The Stonekeeper's Curse");
         allBooks.add("Amulet: Book Three: The Cloud Searchers");

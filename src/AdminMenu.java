@@ -1,7 +1,7 @@
-public class Menu {
+public class AdminMenu {
     int choice;
     Library library = new Library();
-    public Menu(){
+    public AdminMenu(){
 
     }
     public void displayMenu(){
@@ -12,6 +12,7 @@ public class Menu {
         System.out.println("4. Visa lånade böcker");
         System.out.println("5. Ta bort bok");
         System.out.println("6. Avsluta");
+        System.out.println("---------------------");
 
     }
     public int getChoice(){
@@ -35,19 +36,18 @@ public class Menu {
                     System.out.println(library.getAvailableBooks().indexOf(book)+" "+book);
                 break;
             case 3:
-                for(String book : library.getAvailableBooks())
-                    System.out.println(library.getAvailableBooks().indexOf(book)+" "+book);
-                library.runLoanedBook();
+                System.out.println("place holder av lånadbok");
                 break;
             case 4:
+                // VEM SOM LÅNAT, ALLA UTLÅNINGAR
                 for(String book : library.getLoanedBooks())
                     System.out.println(library.getLoanedBooks().indexOf(book)+" "+book);
                 break;
             case 5:
                 System.out.println("Remove book: ");
-                for(String book : library.getAllBooks()) {
+                for(String book : library.getAllBooks())
                     System.out.println(library.getAllBooks().indexOf(book)+" "+book);
-                }
+
                 library.removeAllBooks();
                 break;
             case 6:
