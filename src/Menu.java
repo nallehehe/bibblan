@@ -30,7 +30,7 @@ public class Menu {
                     System.out.println(library.getAllBooks().indexOf(book)+" "+book);
                 break;
             case 2:
-                System.out.println("Available Books");
+                System.out.println("Available Books nu");
                 for(String book : library.getAvailableBooks())
                     System.out.println(library.getAvailableBooks().indexOf(book)+" "+book);
                 break;
