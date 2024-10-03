@@ -13,8 +13,8 @@ public class UserMenu {
         System.out.println("5. Ta bort bok");
         System.out.println("6. Avsluta");
         System.out.println("---------------------");
-
     }
+
     public int getChoice(){
         System.out.println("Välj alternativ");
         try{
@@ -23,7 +23,9 @@ public class UserMenu {
             System.out.println("Invalid input");
         }
         return choice;
-    }public void menuChoice(int choice){
+    }
+
+    public void menuChoice(int choice){
         switch (choice){
             case 1:
                 System.out.println("All Books\n");
@@ -47,6 +49,7 @@ public class UserMenu {
                 break;
             case 5:
                 System.out.println("placeholder LÄMNA TILLBAKA BOK");
+                break;
             case 6:
                 System.exit(0);
 

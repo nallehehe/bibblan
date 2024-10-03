@@ -23,7 +23,8 @@ public class AdminMenu {
             System.out.println("Invalid input");
         }
         return choice;
-    }public void menuChoice(int choice){
+    }
+    public void menuChoice(int choice){
         switch (choice){
             case 1:
                 System.out.println("All Books\n");
